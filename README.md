@@ -22,4 +22,5 @@ cosmetics website, a beauty studio draft, and introductory Git exercises.
 
 ## Author
 
-Jonathans Stefane Irene
+- Full name: Apio Agatha
+- Registration number: M26B13/066...
