@@ -1,5 +1,5 @@
 /* =====================================================
-   Forbes Cosmetics - style.css
+   Agatha Beauty - style.css
    Mobile-first CSS. Base styles are for small screens.
    The media query at the bottom adjusts the layout for
    wider (desktop) screens.
@@ -14,19 +14,32 @@ body {
   margin: 0;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* ---- Typography ---- */
 body {
   font-family: Arial, Helvetica, sans-serif;
   color: #2b1620;
   background-color: #fbf6f2;
   line-height: 1.6;
   font-size: 16px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.skip-link {
+  position: absolute;
+  top: -4rem;
+  left: 1rem;
+  z-index: 1;
+  padding: 0.6rem 1rem;
+  background: #fff;
+  color: #2b1620;
+}
+
+.skip-link:focus {
+  top: 1rem;
 }
 
 h1, h2, h3 {
@@ -88,13 +101,45 @@ header nav a {
 
 /* ---- Main content ---- */
 main {
-  max-width: 1000px;
+  max-width: 1120px;
   margin: 0 auto;
   padding: 20px 15px;
 }
 
 section {
   margin-bottom: 40px;
+}
+
+.hero {
+  display: grid;
+  gap: 24px;
+  align-items: center;
+  padding: 24px;
+  background: #ffffff;
+}
+
+.hero h2 {
+  font-size: clamp(2rem, 5vw, 3.25rem);
+}
+
+.hero-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.button-link {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 3px;
+  background-color: #7a2138;
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.button-link:hover {
+  background-color: #a8324a;
 }
 
 /* Groups of cards: single column on mobile, row on desktop */
@@ -105,14 +150,25 @@ section {
 }
 
 .article-group article {
-  border-top: 1px solid #e6d9d0;
-  padding-top: 15px;
+  min-width: 0;
+  border: 1px solid #e6d9d0;
+  border-radius: 4px;
+  padding: 18px;
+  background: #ffffff;
+}
+
+.article-group article img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  margin: 12px 0;
+  object-fit: cover;
 }
 
 aside {
   background-color: #ffffff;
   border-left: 4px solid #b98b4e;
   padding: 15px 20px;
+  margin-bottom: 40px;
 }
 
 address {
@@ -211,15 +267,23 @@ footer nav a:hover {
     padding: 30px 40px;
   }
 
+  .hero {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
+    gap: 40px;
+    padding: 40px;
+  }
+
+  .hero-image {
+    height: 360px;
+  }
+
   .article-group {
     flex-direction: row;
   }
 
   .article-group article {
     flex: 1;
-    border-top: none;
-    border-left: 3px solid #b98b4e;
-    padding: 0 0 0 15px;
+    border-top: 3px solid #b98b4e;
   }
 
   footer {

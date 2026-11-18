@@ -1,22 +1,53 @@
-
-<!DOCTYPE html>
-
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My GITHUB Project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A collection of Agatha's web development projects and practice work.">
+    <title>Agatha's Web Projects</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="site-header">
+        <a class="brand" href="index.html">Agatha's Web Projects</a>
+        <nav aria-label="Main navigation">
+            <a href="about-my-website.html">About</a>
+            <a href="agatha-beauty/index.html">Agatha Beauty</a>
+            <a href="agatha-beauty-studio/index.html">Beauty Studio</a>
+        </nav>
+    </header>
 
-```
-<h1>Welcome to My Project</h1>
+    <main id="main-content">
+        <section class="intro">
+            <p class="eyebrow">Learning by building</p>
+            <h1>Hi, I'm Agatha.</h1>
+            <p>
+                This is where I share the websites I've been creating as I
+                learn more about HTML, CSS, and web design.
+            </p>
+            <a class="button-link" href="about-my-website.html">A little about this site</a>
+        </section>
 
-<p>
-    This is my first web development project ever. I am hoping to learn more as the semester goes on and become more skilled.
-    
-</p>
-```
+        <section class="projects" aria-labelledby="projects-heading">
+            <h2 id="projects-heading">A few things I've been working on</h2>
+            <div class="project-grid">
+                <article class="project-card">
+                    <h3>Agatha Beauty</h3>
+                    <p>A responsive makeup website with product, story, and contact pages.</p>
+                    <a href="agatha-beauty/index.html">Visit the website</a>
+                </article>
+                <article class="project-card">
+                    <h3>Agatha's Beauty Studio</h3>
+                    <p>A simple studio concept for services, products, and appointments.</p>
+                    <a href="agatha-beauty-studio/index.html">Visit the website</a>
+                </article>
+            </div>
+        </section>
+    </main>
 
+    <footer>
+        <p>Made with care by Agatha.</p>
+    </footer>
 </body>
 </html>
